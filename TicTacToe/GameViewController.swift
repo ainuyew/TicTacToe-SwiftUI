@@ -10,6 +10,26 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    @IBOutlet weak var imageView00: UIImageView!
+    @IBOutlet weak var imageView01: UIImageView!
+    @IBOutlet weak var imageView02: UIImageView!
+    
+    @IBOutlet weak var imageView10: UIImageView!
+    @IBOutlet weak var imageView11: UIImageView!
+    @IBOutlet weak var imageView12: UIImageView!
+    
+    @IBOutlet weak var imageView20: UIImageView!
+    @IBOutlet weak var imageView21: UIImageView!
+    @IBOutlet weak var imageView22: UIImageView!
+    
+    @IBOutlet weak var playerScoreLabel: UILabel!
+    @IBOutlet weak var computerScoreLabel: UILabel!
+    
+    @IBOutlet weak var gameLabel: UILabel!
+    
+    var playerScore: Int = 0
+    var computerScore: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +48,11 @@ class GameViewController: UIViewController {
             
             view.showsFPS = true
             view.showsNodeCount = true
+            
+            self.gameLabel.text = "Player's Turn"
+            
+            self.playerScoreLabel.text = String(playerScore)
+            self.computerScoreLabel.text = String(computerScore)
         }
     }
 
